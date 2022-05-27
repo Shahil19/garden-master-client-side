@@ -8,6 +8,7 @@ import Purchase from './Pages/Purchase/Purchase';
 import Login from './Pages/Registration/Login';
 
 function App() {
+  console.log(process.env.REACT_APP_name);
   return (
     <div className='container mx-auto'>
       <Navbar></Navbar>
