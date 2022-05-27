@@ -6,6 +6,7 @@ import Navbar from './Pages/Shared/Navbar';
 import Footer from './Pages/Shared/Footer';
 import Purchase from './Pages/Purchase/Purchase';
 import Login from './Pages/Registration/Login';
+import SignUp from './Pages/Registration/SignUp';
 
 function App() {
   console.log(process.env.REACT_APP_name);
@@ -17,6 +18,7 @@ function App() {
         <Route path='/' element={<Home></Home>} ></Route>
         <Route path='purchase' element={<Purchase></Purchase>} ></Route>
         <Route path='login' element={<Login></Login>} ></Route>
+        <Route path='signup' element={<SignUp></SignUp>} ></Route>
       </Routes>
 
       <Footer></Footer>
