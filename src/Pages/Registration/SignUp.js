@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useAuthState, useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -17,13 +17,25 @@ const SignUp = () => {
         eError,
     ] = useCreateUserWithEmailAndPassword(auth);
 
+    // password error
+    const [passError, setPassError] = useState('')
+
     // --------------------Create new User
     const onSubmit = data => {
         const email = data.email
         const password = data.password
-        console.log({ email, password });
-        createUserWithEmailAndPassword(email, password)
-        reset()
+        const confirmPassword = data.confirmPassword
+
+        if (password !== confirmPassword) {
+            setPassError({ message: "Two password did not match" })
+
+        } else {
+            console.log({ email, password });
+            createUserWithEmailAndPassword(email, password)
+            setPassError("")
+            reset()
+        }
+
     };
 
     // redirect the user where the wanted to go (for require auth routes)
@@ -59,9 +71,21 @@ const SignUp = () => {
                     </label>
                 </div>
 
+                <div className="form-control w-full max-w-xs">
+                    <input {...register("confirmPassword", { required: true })} type="password" placeholder="Confirm password" className="input input-bordered w-full max-w-xs" />
+                    <label className="label">
+                        {errors.password && <span className="label-text-alt text-red-500">Password is required</span>}
+                    </label>
+                </div>
+
                 {
                     eError && <label className="label">
                         <span className="label-text-alt text-red-500">{eError.message}</span>
+                    </label>
+                }
+                {
+                    passError && <label className="label">
+                        <span className="label-text-alt text-red-500">{passError.message}</span>
                     </label>
                 }
 
