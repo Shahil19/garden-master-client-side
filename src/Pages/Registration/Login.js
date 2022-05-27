@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import GoogleLogin from './GoogleLogin';
 import { useAuthState, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init'
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
@@ -61,6 +61,10 @@ const Login = () => {
                 }
 
                 <input className='btn btn-wide' type="submit" />
+
+                <label className="label">
+                    <span className="label-text-alt text-blue-500 text-sm"><Link to='/signup'>New to Garden Master?</Link></span>
+                </label>
             </form>
 
             <div className="divider">OR</div>
