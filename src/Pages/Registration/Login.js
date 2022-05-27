@@ -1,13 +1,15 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import GoogleLogin from './GoogleLogin';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useAuthState, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init'
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
-    const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
+    const [user] = useAuthState(auth);
 
+    const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
     //----------------- email login
     const [
         signInWithEmailAndPassword,
@@ -22,6 +24,15 @@ const Login = () => {
         signInWithEmailAndPassword(email, password)
         reset()
     };
+
+    // redirect the user where the wanted to go (for require auth routes)
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
+    if (user) {
+        navigate(from, { replace: true });
+    }
+
 
     return (
 
