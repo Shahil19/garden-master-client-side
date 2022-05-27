@@ -1,12 +1,27 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import GoogleLogin from './GoogleLogin';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init'
 
 const Login = () => {
 
     const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
+
+    //----------------- email login
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth);
+
+
     const onSubmit = data => {
         console.log(data)
+        const email = data.email
+        const password = data.password
+        createUserWithEmailAndPassword(email, password)
         reset()
     };
 
