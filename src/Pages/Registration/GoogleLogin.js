@@ -2,10 +2,15 @@ import React from 'react';
 import { useAuthState, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import useToken from '../../hooks/useToken';
 
 const GoogleLogin = () => {
     const [user] = useAuthState(auth);
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+
+    // //----------------------- send user to server
+    const [token] = useToken(gUser)
+
 
     // google sign in
     const googleSignin = () => {

@@ -10,8 +10,8 @@ const ToolCard = ({ tool }) => {
         navigate(`/purchase/${_id}`)
     }
     return (
-        <div className="card max-w-full bg-base-100 shadow-xl">
-            {/* <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure> */}
+        <div className="card glass max-w-full bg-base-100 shadow-xl">
+            <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title">
                     {name}

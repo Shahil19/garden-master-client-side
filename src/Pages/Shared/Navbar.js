@@ -47,6 +47,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
+                <p>{user && user.email}</p>
                 <label htmlFor="dashboard-drawer" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
             </div>
         </div>

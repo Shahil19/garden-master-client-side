@@ -3,6 +3,7 @@ import { useAuthState, useCreateUserWithEmailAndPassword } from 'react-firebase-
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import useToken from '../../hooks/useToken';
 import GoogleLogin from './GoogleLogin';
 
 const SignUp = () => {
@@ -30,13 +31,16 @@ const SignUp = () => {
             setPassError({ message: "Two password did not match" })
 
         } else {
-            console.log({ email, password });
+
             createUserWithEmailAndPassword(email, password)
             setPassError("")
             reset()
         }
-
     };
+
+    //----------------------- send user to server
+    const [token] = useToken(eUser)
+
 
     // redirect the user where the wanted to go (for require auth routes)
     const navigate = useNavigate();

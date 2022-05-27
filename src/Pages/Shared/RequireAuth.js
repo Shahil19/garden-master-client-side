@@ -2,6 +2,7 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Navigate, useLocation } from 'react-router-dom';
 import auth from '../../firebase.init';
+import Loading from './Loading';
 
 const RequireAuth = ({ children }) => {
     const [user, loading] = useAuthState(auth);
@@ -9,7 +10,7 @@ const RequireAuth = ({ children }) => {
 
     // if user loading redirect to loading page
     if (loading) {
-        return <h1 className='text-6xl'> I am loading</h1>
+        return <Loading></Loading>
     }
 
     if (!user) {

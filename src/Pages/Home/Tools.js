@@ -14,7 +14,7 @@ const Tools = () => {
              })
      }, []) */
 
-    const { data: tools, isLoading, refetch } = useQuery("tools", () => fetch(`https://whispering-mountain-30344.herokuapp.com/tools`)
+    const { data: tools, isLoading, refetch } = useQuery("tools", () => fetch(`https://whispering-mountain-30344.herokuapp.com/tool`)
         .then(res => res.json())
     )
 
