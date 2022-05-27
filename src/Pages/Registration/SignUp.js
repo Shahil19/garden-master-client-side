@@ -21,7 +21,7 @@ const SignUp = () => {
     // password error
     const [passError, setPassError] = useState('')
 
-    // --------------------Create new User
+    // --------------------Create new User with email and password
     const onSubmit = data => {
         const email = data.email
         const password = data.password
@@ -31,7 +31,6 @@ const SignUp = () => {
             setPassError({ message: "Two password did not match" })
 
         } else {
-
             createUserWithEmailAndPassword(email, password)
             setPassError("")
             reset()

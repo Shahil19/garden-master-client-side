@@ -18,6 +18,7 @@ import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 
 import AddProduct from './Pages/Dashboard/AddProduct';
 import MakeAdmin from './Pages/Dashboard/MakeAdmin';
+import { ToastContainer } from 'react-toastify';
 // import ManageOrders from '../ManageOrders';
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
       </Routes>
 
       <Footer></Footer>
+      <ToastContainer></ToastContainer>
     </div>
   );
 }
