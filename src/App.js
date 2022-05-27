@@ -7,6 +7,7 @@ import Footer from './Pages/Shared/Footer';
 import Purchase from './Pages/Purchase/Purchase';
 import Login from './Pages/Registration/Login';
 import SignUp from './Pages/Registration/SignUp';
+import RequireAuth from './Pages/Shared/RequireAuth';
 
 function App() {
   console.log(process.env.REACT_APP_name);
@@ -16,7 +17,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Home></Home>} ></Route>
-        <Route path='purchase' element={<Purchase></Purchase>} ></Route>
+        <Route path='purchase' element={<RequireAuth><Purchase /></RequireAuth>} ></Route>
         <Route path='login' element={<Login></Login>} ></Route>
         <Route path='signup' element={<SignUp></SignUp>} ></Route>
       </Routes>
