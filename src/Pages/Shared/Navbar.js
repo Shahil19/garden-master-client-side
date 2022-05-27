@@ -16,10 +16,11 @@ const Navbar = () => {
 
     const navMenu = <>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/purchase">Purchase</Link></li>
+        {/* <li><Link to="/purchase">Purchase</Link></li> */}
         {
             user && <li><Link to="/dashboard">Dashboard</Link></li>
         }
+        <li><Link to="/portfolio">Portfolio</Link></li>
         {
             user ?
                 <button onClick={logout} className='btn btn-link'>Sign Out</button>
@@ -46,7 +47,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <label for="dashboard-drawer" class="btn btn-primary drawer-button lg:hidden">Open drawer</label>
+                <label htmlFor="dashboard-drawer" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
             </div>
         </div>
     );

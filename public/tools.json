@@ -1,0 +1,29 @@
+[
+    {
+      "_id": 1,
+      "name": "Round Shovel",
+      "shortDescription": "",
+      "minQuantity": 400,
+      "availableQuantity": 2000,
+      "price": 300,
+      "img": ""
+    },
+    {
+      "_id": 2,
+      "name": "Leaf Rake",
+      "shortDescription": "",
+      "minQuantity": 240,
+      "availableQuantity": 7000,
+      "price": 490,
+      "img": ""
+    },
+    {
+      "_id": 3,
+      "name": "Dust Shovel",
+      "shortDescription": "",
+      "minQuantity": 150,
+      "availableQuantity": 2700,
+      "price": 630,
+      "img": ""
+    }
+]
