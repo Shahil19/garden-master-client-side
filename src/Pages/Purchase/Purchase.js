@@ -27,13 +27,21 @@ const Purchase = () => {
 
     // user info
     const { email, displayName } = user;
-    console.log({ email, displayName });
     // order
     const onSubmit = data => {
+        const productDetails = {
+            address: data.address,
+            email: data.email,
+            orderQuantity: data.orderQuantity,
+            phone: data.phone,
+            productName: data.productName,
+            price,
+            img
+        }
 
         fetch(`https://whispering-mountain-30344.herokuapp.com/order`, {
             method: 'POST',
-            body: JSON.stringify(data),
+            body: JSON.stringify(productDetails),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
             },
@@ -56,7 +64,11 @@ const Purchase = () => {
                 </div>
             </div>
             <h1 className='text-3xl font-bold text-center my-8'>Purchase <span className='text-cyan-500'>{name}</span></h1>
-
+            <div class="avatar block mx-auto">
+                <div class="w-36 mx-auto mask mask-squircle">
+                    <img src={img} alt="tool" />
+                </div>
+            </div>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>
@@ -81,17 +93,22 @@ const Purchase = () => {
                             <td>{shortDescription}</td>
                         </tr>
 
-
                         <tr className="hover">
                             <th>3</th>
-                            <th>Available Products</th>
-                            <td>{availableQuantity}</td>
+                            <th>Price per product</th>
+                            <td>{price} tk</td>
                         </tr>
 
                         <tr className="hover">
                             <th>4</th>
+                            <th>Available Products</th>
+                            <td>{availableQuantity} units</td>
+                        </tr>
+
+                        <tr className="hover">
+                            <th>5</th>
                             <th>Minimum Order Quantity</th>
-                            <td>{minQuantity}</td>
+                            <td>{minQuantity} units</td>
                         </tr>
                     </tbody>
                 </table>
