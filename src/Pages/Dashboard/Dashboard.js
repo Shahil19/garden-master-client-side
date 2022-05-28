@@ -26,15 +26,16 @@ const Dashboard = () => {
                 <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
                     {
                         !admin && <>
-                            <li><Link to='/dashboard'>My Orders</Link></li>
+                            <li><Link to='/dashboard/myorders'>My Orders</Link></li>
                             <li><Link to='/dashboard/addreview'>Add Review</Link></li>
                         </>
                     }
 
-                    <li><Link to='/dashboard/profile'>My Profile</Link></li>
+                    <li><Link to='/dashboard'>My Profile</Link></li>
 
                     {
                         admin && <>
+                            <li><Link to='/dashboard/manageproducts'>Manage All Products</Link></li>
                             <li><Link to='/dashboard/manageorders'>Manage Orders</Link></li>
                             <li><Link to='/dashboard/addproduct'>Add Product</Link></li>
                             <li><Link to='/dashboard/makeadmin'>Make Admin</Link></li>

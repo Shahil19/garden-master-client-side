@@ -19,6 +19,17 @@ const MyProfile = () => {
                         </div>
                     </div>
                 </div>
+
+            </div>
+
+            <div class="form-control">
+                <label class="label">
+                    <span class="label-text">Enter amount</span>
+                </label>
+                <label class="input-group">
+                    <input type="text" placeholder="0.01" class="input input-bordered" />
+                    <span>BTC</span>
+                </label>
             </div>
         </div>
     );

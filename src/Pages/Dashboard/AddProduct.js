@@ -1,11 +1,29 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 
 const AddProduct = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const navigate = useNavigate()
 
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => {
+        fetch('https://whispering-mountain-30344.herokuapp.com/tool', {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+        })
+            .then((response) => response.json())
+            .then((json) => {
+
+                toast.success(`${data.name} Added`)
+                navigate('/')
+            }
+            );
+
+    };
     return (
         <div>
             <div className="mockup-window border border-base-300">
@@ -16,9 +34,9 @@ const AddProduct = () => {
                         <label className="label">
                             <span className="label-text">Product Name</span>
                         </label>
-                        <input {...register("productName", { required: true })} type="text" placeholder="Product NAme" className="input input-bordered w-full max-w-xs" />
+                        <input {...register("name", { required: true })} type="text" placeholder="Product NAme" className="input input-bordered w-full max-w-xs" />
                         <label className="label">
-                            {errors.productName && <span className='text-red-500'>This field is required</span>}
+                            {errors.name && <span className='text-red-500'>This field is required</span>}
                         </label>
                     </div>
 
@@ -62,22 +80,11 @@ const AddProduct = () => {
                         </label>
                     </div>
 
-
-                    <div className="form-control w-full max-w-xs mx-auto">
-                        <label className="label">
-                            <span className="label-text">Available Quantity</span>
-                        </label>
-                        <input {...register("availableQuantity", { required: true })} type="number" placeholder="Available Quantity" className="input input-bordered w-full max-w-xs" />
-                        <label className="label">
-                            {errors.availableQuantity && <span className='text-red-500'>This field is required</span>}
-                        </label>
-                    </div>
-
                     <div className="form-control w-full max-w-xs mx-auto">
                         <label className="label">
                             <span className="label-text">Product Image Link</span>
                         </label>
-                        <input {...register("img", { required: true })} type="number" placeholder="Product Image Link" className="input input-bordered w-full max-w-xs" />
+                        <input {...register("img", { required: true })} type="text" placeholder="Product Image Link" className="input input-bordered w-full max-w-xs" />
                         <label className="label">
                             {errors.img && <span className='text-red-500'>This field is required</span>}
                         </label>
