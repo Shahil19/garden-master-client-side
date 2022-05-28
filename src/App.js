@@ -19,7 +19,8 @@ import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import MakeAdmin from './Pages/Dashboard/MakeAdmin';
 import { ToastContainer } from 'react-toastify';
-// import ManageOrders from '../ManageOrders';
+import ManageOrders from './Pages/Dashboard/ManageOrders';
+
 
 function App() {
   console.log(process.env.REACT_APP_name);
@@ -38,8 +39,10 @@ function App() {
           <Route index element={<MyOrders />} />
           <Route path="myreviews" element={<MyReview />} />
           <Route path="addreview" element={<AddReview />} />
+
           <Route path="profile" element={<MyProfile />} />
-          {/* <Route path="manageorders" element={<ManageOrders />} /> */}
+
+          <Route path="manageorders" element={<ManageOrders />} />
           <Route path="addproduct" element={<AddProduct />} />
           <Route path="makeadmin" element={<MakeAdmin />} />
         </Route>
