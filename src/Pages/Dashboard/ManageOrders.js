@@ -13,7 +13,7 @@ const ManageOrders = () => {
 
     return (
         <div>
-            <h2 className='text-2xl'>Manage Orders</h2>
+            <h2 className='text-3xl font-medium text-center my-3'>Manage Orders</h2>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>
@@ -22,6 +22,7 @@ const ManageOrders = () => {
                             <th>Product Name</th>
                             <th>Ordered Quantity</th>
                             <th>Total Price</th>
+                            <th>Buyer</th>
                             <th>Status</th>
                             <th>Shift Order</th>
                             <th>Cancel Order</th>
@@ -33,6 +34,7 @@ const ManageOrders = () => {
                                 key={tool._id}
                                 index={index}
                                 tool={tool}
+                                refetch={refetch}
                             ></ManageOrderRow>)
                         }
                     </tbody>

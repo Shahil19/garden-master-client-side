@@ -12,13 +12,13 @@ We are a manufacturer. We are looking for a front-end web developer to build a w
 
 ## Task Details: 
 1. Home page will have a Header (simple navbar), Banner, Tools/Parts, Business Summary, Reviews, and Footer. The tools/parts will have either 3 or 6 tools/parts. Based on your design, you can put one or more tools/parts in a row. Each tool/part should have a relevant name, image, short description, minimum order quantity, available quantity, price (per unit price), a place order/purchase/book now/ buy now button. If a user clicks on the purchase or buy now button it will take the user to the purchase page. 
-<!------------------------------------- reviews and two parts left ------------------------------------->
+<!------------------------------------- reviews  ------------------------------------->
 
 2. Add two different sections on the home page and the 6 sections mentioned above. Tips: This is the place to shine. Add something different and unique to make your website looks different than others. And Make them relevant to your website. And make these two sections meaningful.
-<!------------------------------------- left ------------------------------------->
+<!------------------------------------- Done ------------------------------------->
 
 3. The business summary will show some summary of your business. There could be 3/4 summary on this summary section. For example, we served 100+ customers, 120M+ Annual revenue, 33K+ Reviews, 50+ tools, etc. Make sure you use some relevant icons here. You can use Hero Icons, React Icons, Font Awesome, Bootstrap Icons, Daisy UI or any icons that you like. To see an example, you will find an image in the images folder of this repository.
-<!------------------------------------- Done ------------------------------------->
+<!------------------------------------- done ------------------------------------->
 
 4. The `purchase' page will be a private/protected route. Please make sure that the private route redirects to the login page if the user is not logged in. After login, the user will be redirected to the page he/she wanted to go to. Also, after reloading the page of a private/protected route, the user is not redirected to the login page.The purchase page should display detailed information about the item the user has clicked somewhere at the top. It will also display the user's name and email address from the login system. The user will have a field to provide an address, phone number, and other necessary information (if applicable) to place the order or complete the purchase. 
 Please do not block the user if the email is not verified for our assignment evaluation purpose. Because it will stop the assignment evaluation if the email sending is not working, if you want, you can enforce this after receiving assignment marks.
@@ -35,16 +35,16 @@ Please do not block the user if the email is not verified for our assignment eva
 <!------------------------------------- Done ------------------------------------->
 
 8. On `My Orders` page, the logged-in user will see only their orders. If the user wants, they should be able to cancel (canceling is just deleting the order) any order that is not paid yet. Ask for a confirmation message before canceling an order. Do not use browser default confirm. Instead, use a good-looking modal. Please note users will not see the cancel option for any paid order.
-<!-------------------------------------modal left ------------------------------------->
+<!-------------------------------------done ------------------------------------->
 
 9. On the `My Orders` page, there will be a payment button for each order. The user has not paid yet. The pay button will take the user to the payment page. The user should be able to pay by using a credit card here. The payment page will display order details. Once the payment is completed for an order, the user will see the transaction id for that order on the my orders page.
-<!------------------------------------- left ------------------------------------->
+<!------------------------------------- won't do ------------------------------------->
 
 10. On the `Add A Review` page, users should be able to add a review. A review will contain ratings ( a number 1 to 5 and a description). That review will appear on the home page reviews section. Right now, you will see every review on the home page. There is no limit on the number of reviews or the order of the review.
 <!------------------------------------- left ------------------------------------->
 
 11. The `My profile` route will be available for every user (admin or non-admin. everyone will see this link). The user will see their name and email address on this profile in this link. Also, this page will have fields to add fields like education, location (city/district), phone number, LinkedIn profile link, etc. And users will be able to save this information in the database. Also, the user will be able to update this information.
-<!------------------------------------- left ------------------------------------->
+<!------------------------------------- done ------------------------------------->
 
 12. If an admin logs in, they will not see the options that a user sees except `My Profile`. This means an admin will not see my orders and add a review link. Instead, an admin will see `My Profile`, `Manage All Orders`, `Add A Product`, `Make Admin`, `Manage Products`. Based on your website idea, you can change the name of these menu names. Manage products will be described in the bonus section.
 <!------------------------------------- Done ------------------------------------->
@@ -67,7 +67,7 @@ Please do not block the user if the email is not verified for our assignment eva
 
     14.6 What is a unit test? Why should write unit tests?
 
-    <!------------------------------------- left ------------------------------------->
+    <!------------------------------------- done ------------------------------------->
 
 15. Create `My Portfolio` route. In this route, you will have your name, email address, educational background, list of technologies or skills you have as a web developer. Add links of three of your projects (live website links). Adding descriptions or screenshots of your projects are optional.
 <!------------------------------------- done ------------------------------------->
@@ -80,7 +80,7 @@ Please do not block the user if the email is not verified for our assignment eva
 
 ### Bonus: 
 1. Meaningful `readme.md` file on both the client and server sides containing your website name, a link to your live site. Add at least five bullet points that mention your website's different features and functionality.
-<!------------------------------------- left ------------------------------------->
+<!------------------------------------- done ------------------------------------->
 
 2. At least 15 meaningful GitHub commits for the client-side and at least 10 meaningful commits for the server-side repository.
 <!------------------------------------- Done ------------------------------------->
@@ -89,7 +89,7 @@ Please do not block the user if the email is not verified for our assignment eva
 <!------------------------------------- Done ------------------------------------->
 
 4. Make the website meaningful and consistent in look and feel. Give your website a relevant name. Images and all the content of the website have to be appropriate. No `lorem ipsum` please. 
-<!------------------------------------- left ------------------------------------->
+<!------------------------------------- DOne ------------------------------------->
 
 5. Clean and organized Code. Organize components and add comments when needed. use `.env` file on the server, `.env.local` file on the client to hide db user and password, etc. Also use the `.gitignore` file
 <!------------------------------------- Done ------------------------------------->

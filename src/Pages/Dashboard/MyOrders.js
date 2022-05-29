@@ -17,14 +17,15 @@ const MyOrders = () => {
     return (
         <div>
             <h2 className='text-2xl'>MyOrders</h2>
-            <div class="overflow-x-auto">
-                <table class="table w-full">
+            <div className="overflow-x-auto">
+                <table className="table w-full">
                     <thead>
                         <tr>
                             <th></th>
                             <th>Product Name</th>
                             <th>Ordered Quantity</th>
                             <th>Total Price</th>
+                            <th>Payment</th>
                             <th>Cancel Order</th>
                         </tr>
                     </thead>

@@ -57,15 +57,15 @@ const Purchase = () => {
     return (
         <div className='md:px-5 '>
 
-            <div class="card max-w-max bg-base-100 shadow-xl mx-auto">
-                <div class="card-body">
-                    <h2 class="text-xl font-semibold">User Name: <span className='text-2xl font-bold'>{displayName}</span></h2>
-                    <h2 class="card-title">User email: <span className='text-2xl font-bold'>{email}</span></h2>
+            <div className="card max-w-max bg-base-100 shadow-xl mx-auto">
+                <div className="card-body">
+                    <h2 className="text-xl font-semibold">User Name: <span className='text-2xl font-bold'>{displayName}</span></h2>
+                    <h2 className="card-title">User email: <span className='text-2xl font-bold'>{email}</span></h2>
                 </div>
             </div>
-            <h1 className='text-3xl font-bold text-center my-8'>Purchase <span className='text-cyan-500'>{name}</span></h1>
-            <div class="avatar block mx-auto">
-                <div class="w-36 mx-auto mask mask-squircle">
+            <h1 className='md:text-4xl text-2xl font-bold text-center my-8'>Purchase <span className='text-cyan-500'>{name}</span></h1>
+            <div className="avatar block mx-auto">
+                <div className="w-36 mx-auto mask mask-squircle">
                     <img src={img} alt="tool" />
                 </div>
             </div>
@@ -115,49 +115,49 @@ const Purchase = () => {
             </div>
 
 
-            <div class="hero min-h-screen bg-base-200">
-                <div class="hero-content flex-col lg:flex-row-reverse">
-                    <div class="text-center lg:text-left">
-                        <h1 class="text-5xl font-bold">Order now!</h1>
-                        <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <div className="hero min-h-screen bg-base-200">
+                <div className="hero-content flex-col lg:flex-row-reverse">
+                    <div className="text-center lg:text-left">
+                        <h1 className="text-5xl font-bold">Order now!</h1>
+                        <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
                     </div>
-                    <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <div class="card-body">
+                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                        <div className="card-body">
 
                             <form onSubmit={handleSubmit(onSubmit)}>
-                                <div class="form-control">
-                                    <label class="label">
-                                        <span class="label-text">Product Name</span>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Product Name</span>
                                     </label>
-                                    <input {...register("productName", { required: true })} type="text" value={name} placeholder="email" class="input input-bordered" />
+                                    <input {...register("productName", { required: true })} type="text" value={name} placeholder="email" className="input input-bordered" />
                                 </div>
-                                <div class="form-control">
-                                    <label class="label">
-                                        <span class="label-text">Email</span>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Email</span>
                                     </label>
-                                    <input {...register("email", { required: true })} type="email" value={user?.email} placeholder="email" class="input input-bordered" />
+                                    <input {...register("email", { required: true })} type="email" value={user?.email} placeholder="email" className="input input-bordered" />
                                 </div>
-                                <div class="form-control">
-                                    <label class="label">
-                                        <span class="label-text">Order Quantity</span>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Order Quantity</span>
                                     </label>
-                                    <input {...register("orderQuantity", { required: true })} type="number" placeholder={`Minimum ${minQuantity} units`} class="input input-bordered" />
+                                    <input {...register("orderQuantity", { required: true })} type="number" placeholder={`Minimum ${minQuantity} units`} className="input input-bordered" />
                                 </div>
-                                <div class="form-control">
-                                    <label class="label">
-                                        <span class="label-text">Your Address</span>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Your Address</span>
                                     </label>
-                                    <input {...register("address", { required: true })} type="text" placeholder="Your Address" class="input input-bordered" />
+                                    <input {...register("address", { required: true })} type="text" placeholder="Your Address" className="input input-bordered" />
                                 </div>
-                                <div class="form-control">
-                                    <label class="label">
-                                        <span class="label-text">Your Phone</span>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Your Phone</span>
                                     </label>
-                                    <input {...register("phone", { required: true })} type="text" placeholder="Your Phone Number" class="input input-bordered" />
+                                    <input {...register("phone", { required: true })} type="text" placeholder="Your Phone Number" className="input input-bordered" />
                                 </div>
 
-                                <div class="form-control mt-6">
-                                    <input type="submit" class="btn btn-primary"></input>
+                                <div className="form-control mt-6">
+                                    <input type="submit" className="btn btn-primary"></input>
                                 </div>
                             </form>
 

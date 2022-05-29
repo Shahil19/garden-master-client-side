@@ -17,16 +17,17 @@ const ManageProducts = () => {
     }
     return (
         <div>
-            <h2>Manage All Products {tools?.length}</h2>
+            <h2 className='text-3xl font-medium text-center my-3'>Manage All Products</h2>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>
                         <tr>
                             <th></th>
                             <th>Product Name</th>
+                            <th>Product ID</th>
                             <th>Ordered Quantity</th>
                             <th>Update Stock</th>
-                            <th>Cancel Order</th>
+                            <th>Delete Product</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -44,14 +45,14 @@ const ManageProducts = () => {
                 </table>
             </div>
             {/* Update Stock Modal */}
-            <input type="checkbox" id="stockUp" class="modal-toggle" />
-            <div class="modal">
-                <div class="modal-box">
-                    <label for="stockUp" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+            <input type="checkbox" id="stockUp" className="modal-toggle" />
+            <div className="modal">
+                <div className="modal-box">
+                    <label htmlFor="stockUp" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <p>Update Stock Of </p>
-                    <input type="text" placeholder="Type here" class="input input-bordered input-primary w-full max-w-xs" />
-                    <div class="modal-action">
-                        <label for="stockUp" class="btn">Yay!</label>
+                    <input type="text" placeholder="Type here" className="input input-bordered input-primary w-full max-w-xs" />
+                    <div className="modal-action">
+                        <label htmlFor="stockUp" className="btn">Yay!</label>
                     </div>
                 </div>
             </div>

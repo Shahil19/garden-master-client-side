@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { signOut } from 'firebase/auth';
 
-
 const Navbar = () => {
     // get user
     const [user] = useAuthState(auth);
@@ -48,7 +47,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <label htmlFor="dashboard-drawer" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
+                <label htmlFor="dashboard-drawer" className="btn btn-xs drawer-button lg:hidden">Dashboard</label>
             </div>
         </div>
     );

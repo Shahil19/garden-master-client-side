@@ -24,6 +24,7 @@ const AddProduct = () => {
             );
 
     };
+
     return (
         <div>
             <div className="mockup-window border border-base-300">

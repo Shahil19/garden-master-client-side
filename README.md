@@ -10,3 +10,5 @@
 - react-hook-form
 - react-query
 - react-toastify
+- heroicons/react
+- react-hook-form

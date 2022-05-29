@@ -17,6 +17,10 @@ const AdminTableRow = ({ user, index, refetch }) => {
                 refetch()
             })
     }
+
+    const deleteUser = () => {
+        const proceed = window.confirm("Are you sure you want to delete user?")
+    }
     return (
         <tr>
             <th>{index + 1}</th>
@@ -26,7 +30,7 @@ const AdminTableRow = ({ user, index, refetch }) => {
                     user.role === 'admin' ? "Admin" : <button onClick={makeAdmin} className='btn btn-xs'>Make Admin</button>
                 }
             </td>
-            <td><button className='btn btn-xs bg-red-500'>Delete User</button></td>
+            <td><button onClick={deleteUser} className='btn btn-xs bg-red-500'>Delete User</button></td>
 
         </tr>
     );

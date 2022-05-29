@@ -5,11 +5,11 @@ const Blog = () => {
         <div>
             <h2 className='text-3xl font-medium text-center'>Blogs</h2>
 
-            <div className='px-6'>
-                <div class="card w-full bg-base-100 shadow-xl">
-                    <div class="card-body">
-                        <h2 class="card-title">1. How will you improve the performance of a React Application?</h2>
-                        <ol class="list-decimal">
+            <div className='md:px-6'>
+                <div className="card w-full bg-base-100 shadow-xl">
+                    <div className="card-body">
+                        <h2 className="card-title">1. How will you improve the performance of a React Application?</h2>
+                        <ol className="list-decimal">
                             <li>Keeping component state local where necessary.</li>
                             <li>Memoizing React components to prevent unnecessary re-renders.</li>
                             <li>Code-splitting in React using dynamic import</li>
@@ -18,10 +18,10 @@ const Blog = () => {
                         </ol>
                     </div>
                 </div>
-                <div class="card w-full bg-base-100 shadow-xl">
-                    <div class="card-body">
-                        <h2 class="card-title">2. What are the different ways to manage a state in a React application?</h2>
-                        <ol class="list-decimal">
+                <div className="card w-full bg-base-100 shadow-xl">
+                    <div className="card-body">
+                        <h2 className="card-title">2. What are the different ways to manage a state in a React application?</h2>
+                        <ol className="list-decimal">
                             <li>Local state.</li>
                             <li>Global state.</li>
                             <li>Server state.</li>
@@ -29,23 +29,23 @@ const Blog = () => {
                         </ol>
                     </div>
                 </div>
-                <div class="card w-full bg-base-100 shadow-xl">
-                    <div class="card-body">
-                        <h2 class="card-title">3. How does prototypical inheritance work?</h2>
+                <div className="card w-full bg-base-100 shadow-xl">
+                    <div className="card-body">
+                        <h2 className="card-title">3. How does prototypical inheritance work?</h2>
                         <p>The Prototypal Inheritance is a feature in javascript used to add methods and properties in objects. It is a method by which an object can inherit the properties and methods of another object. Traditionally, in order to get and set the [[Prototype]] of an object, we use Object. getPrototypeOf and Object</p>
                     </div>
                 </div>
-                <div class="card w-full bg-base-100 shadow-xl">
-                    <div class="card-body">
-                        <h2 class="card-title">4. What is a unit test? Why should write unit tests?  </h2>
+                <div className="card w-full bg-base-100 shadow-xl">
+                    <div className="card-body">
+                        <h2 className="card-title">4. What is a unit test? Why should write unit tests?  </h2>
                         <p>Unit testing allows the programmer to refactor code at a later date, and make sure the module still works correctly (i.e. Regression testing). The procedure is to write test cases for all functions and methods so that whenever a change causes a fault, it can be quickly identified and fixed.</p>
                     </div>
                 </div>
-                <div class="card w-full bg-base-100 shadow-xl">
-                    <div class="card-body">
-                        <h2 class="card-title">5. Management has given you the greenlight to create the product portion of the web application.  </h2>
+                <div className="card w-full bg-base-100 shadow-xl">
+                    <div className="card-body">
+                        <h2 className="card-title">5. Management has given you the greenlight to create the product portion of the web application.  </h2>
                         <p>Unit testing allows the programmer to refactor code at a later date, and make sure the module still works correctly (i.e. Regression testing). The procedure is to write test cases for all functions and methods so that whenever a change causes a fault, it can be quickly identified and fixed.</p>
-                        <ol class="list-decimal px-4">
+                        <ol className="list-decimal px-4">
                             <li>1. Create a Product class with the following attributes:
                                 a. Price
 

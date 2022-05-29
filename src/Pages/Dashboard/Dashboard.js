@@ -9,6 +9,7 @@ import Loading from '../Shared/Loading';
 const Dashboard = () => {
     const [user] = useAuthState(auth)
     const [admin, adminLoading] = useAdmin(user)
+    console.log(admin);
     if (adminLoading) {
         return <Loading></Loading>
     }
@@ -17,7 +18,7 @@ const Dashboard = () => {
         <div className="drawer drawer-mobile">
             <input id="dashboard-drawer" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content">
-                <h2 className='text-3xl text-bold text-center'>Welcome to Dashboard</h2>
+                <h2 className='text-3xl text-bold text-center mt-5 mb-10'>Welcome to Dashboard</h2>
                 <Outlet />
             </div>
 

@@ -23,8 +23,9 @@ const ManageProductRow = ({ tool, index, refetch }) => {
             <tr>
                 <th>{index + 1}</th>
                 <td>{name}</td>
+                <td>{_id}</td>
                 <td>{availableQuantity} Units</td>
-                <td><label for="stockUp" class="btn btn-xs">Update Stock</label></td>
+                <td><label for="stockUp" className="btn btn-xs">Update Stock</label></td>
                 <td><button onClick={deleteProduct} className='btn btn-xs btn-error '>Delete</button></td>
             </tr>
         </>

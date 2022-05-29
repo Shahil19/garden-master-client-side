@@ -22,6 +22,8 @@ import { ToastContainer } from 'react-toastify';
 import ManageOrders from './Pages/Dashboard/ManageOrders';
 import ManageProducts from './Pages/Dashboard/ManageProducts';
 import Blog from './Pages/Blogs/Blog';
+import UpdateProfile from './Pages/Dashboard/UpdateProfile';
+import RequireAdmin from './Pages/Shared/RequireAdmin';
 
 
 function App() {
@@ -38,6 +40,8 @@ function App() {
         <Route path='portfolio' element={<MyPortfolio></MyPortfolio>} ></Route>
         <Route path='blogs' element={<Blog></Blog>} ></Route>
 
+        <Route path="updateprofile" element={<UpdateProfile />} />
+
         <Route path='dashboard' element={<Dashboard></Dashboard>} >
           <Route path="myorders" element={<MyOrders />} />
           <Route path="myreviews" element={<MyReview />} />
@@ -45,10 +49,10 @@ function App() {
 
           <Route index element={<MyProfile />} />
 
-          <Route path="manageproducts" element={<ManageProducts />} />
-          <Route path="manageorders" element={<ManageOrders />} />
-          <Route path="addproduct" element={<AddProduct />} />
-          <Route path="makeadmin" element={<MakeAdmin />} />
+          <Route path="manageproducts" element={<RequireAdmin><ManageProducts /></RequireAdmin>} />
+          <Route path="manageorders" element={<RequireAdmin><ManageOrders /></RequireAdmin>} />
+          <Route path="addproduct" element={<RequireAdmin><AddProduct /></RequireAdmin>} />
+          <Route path="makeadmin" element={<RequireAdmin><MakeAdmin /></RequireAdmin>} />
         </Route>
 
         <Route path='*' element={<NotFound></NotFound>}></Route>

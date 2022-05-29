@@ -17,7 +17,7 @@ const ToolCard = ({ tool }) => {
                     {name}
                     <div className="badge badge-secondary">NEW</div>
                 </h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <p>{shortDescription}</p>
                 <p className='font-semibold'>Minimum Order Quantity: <span className='text-xl'>{minQuantity} </span>unit</p>
                 <p className='font-semibold'>Available Quantity: <span className='text-xl'>{availableQuantity} </span>unit</p>
                 <p className='font-semibold'>price: <span className='text-xl'>{price}tk </span>per unit</p>
